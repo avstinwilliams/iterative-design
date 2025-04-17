@@ -74,5 +74,14 @@
 				})
 				.catch((error) => console.error("Error loading testing:", error));
 		</script>
+        <div id="conclusionContainer"></div>
+		<script>
+			fetch("components/conclusion.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("conclusionContainer").innerHTML = data;
+				})
+				.catch((error) => console.error("Error loading conclusion:", error));
+		</script>
 	</body>
 </html>
