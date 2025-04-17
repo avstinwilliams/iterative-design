@@ -27,32 +27,52 @@
 				and redesign an interactive mobile prototype for Retrofit.
 			</p>
 		</div>
-        <div id="sketchesContainer"></div>
-			<script>
-				fetch("components/sketches.html")
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById(
-							"sketchesContainer"
-						).innerHTML = data;
-					})
-					.catch((error) =>
-						console.error("Error loading sketches:", error)
-					);
-			</script>
-
-            <div id="wireframesContainer"></div>
-			<script>
-				fetch("components/wireframes.html")
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById(
-							"wireframesContainer"
-						).innerHTML = data;
-					})
-					.catch((error) =>
-						console.error("Error loading sketches:", error)
-					);
-			</script>
+		<br />
+		<div id="sketchesContainer"></div>
+		<script>
+			fetch("components/sketches.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("sketchesContainer").innerHTML =
+						data;
+				})
+				.catch((error) =>
+					console.error("Error loading sketches:", error)
+				);
+		</script>
+		<br />
+		<div id="wireframesContainer"></div>
+		<script>
+			fetch("components/wireframes.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("wireframesContainer").innerHTML =
+						data;
+				})
+				.catch((error) =>
+					console.error("Error loading wireframes:", error)
+				);
+		</script>
+		<br />
+		<div id="hifiContainer"></div>
+		<script>
+			fetch("components/hifi.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("hifiContainer").innerHTML = data;
+				})
+				.catch((error) => console.error("Error loading hifi:", error));
+		</script>
+        </script>
+		<br />
+		<div id="testingContainer"></div>
+		<script>
+			fetch("components/user_testing.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("testingContainer").innerHTML = data;
+				})
+				.catch((error) => console.error("Error loading testing:", error));
+		</script>
 	</body>
 </html>
