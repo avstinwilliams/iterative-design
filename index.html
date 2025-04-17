@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- metadata tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>csci 1300 - accessible components</title>
+		<!-- import CSS styles -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<!-- page content goes into <body> -->
+	<body>
+		<div id="title">
+			<h1>Designing a Vintage Shopping App</h1>
+		</div>
+
+		<div id="intro">
+			<p>
+				As the vintage and secondhand market grows, its online
+				marketplace has become more overwhelming. Retrofit's solution is
+				an AI-curated vintage marketplace, which uses social media
+				trends, sales data, and a user's style to personalize a user's
+				shopping experience and recommend a curated inventory.
+			</p>
+			<p>
+				We used an iterative design process to design, get feedback on,
+				and redesign an interactive mobile prototype for Retrofit.
+			</p>
+		</div>
+        <div id="sketchesContainer"></div>
+			<script>
+				fetch("components/sketches.html")
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById(
+							"sketchesContainer"
+						).innerHTML = data;
+					})
+					.catch((error) =>
+						console.error("Error loading sketches:", error)
+					);
+			</script>
+
+            <div id="wireframesContainer"></div>
+			<script>
+				fetch("components/wireframes.html")
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById(
+							"wireframesContainer"
+						).innerHTML = data;
+					})
+					.catch((error) =>
+						console.error("Error loading sketches:", error)
+					);
+			</script>
+	</body>
+</html>
