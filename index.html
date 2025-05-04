@@ -1,87 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- metadata tags -->
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>csci 1300 - accessible components</title>
-		<!-- import CSS styles -->
+		<title>Retrofit Case Study</title>
 		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-
-	<!-- page content goes into <body> -->
 	<body>
-		<div id="title">
-			<h1>Designing a Vintage Shopping App</h1>
-		</div>
+		<header>
+			<h1>Retrofit Case Study</h1>
+		</header>
 
-		<div id="intro">
-			<p>
-				As the vintage and secondhand market grows, its online
-				marketplace has become more overwhelming. Retrofit's solution is
-				an AI-curated vintage marketplace, which uses social media
-				trends, sales data, and a user's style to personalize a user's
-				shopping experience and recommend a curated inventory.
-			</p>
-			<p>
-				We used an iterative design process to design, get feedback on,
-				and redesign an interactive mobile prototype for Retrofit.
-			</p>
-		</div>
-		<br />
-		<div id="sketchesContainer"></div>
-		<script>
-			fetch("components/sketches.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("sketchesContainer").innerHTML =
-						data;
-				})
-				.catch((error) =>
-					console.error("Error loading sketches:", error)
-				);
-		</script>
-		<br />
-		<div id="wireframesContainer"></div>
-		<script>
-			fetch("components/wireframes.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("wireframesContainer").innerHTML =
-						data;
-				})
-				.catch((error) =>
-					console.error("Error loading wireframes:", error)
-				);
-		</script>
-		<br />
-		<div id="hifiContainer"></div>
-		<script>
-			fetch("components/hifi.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("hifiContainer").innerHTML = data;
-				})
-				.catch((error) => console.error("Error loading hifi:", error));
-		</script>
-        </script>
-		<br />
-		<div id="testingContainer"></div>
-		<script>
-			fetch("components/user_testing.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("testingContainer").innerHTML = data;
-				})
-				.catch((error) => console.error("Error loading testing:", error));
-		</script>
-        <div id="conclusionContainer"></div>
-		<script>
-			fetch("components/conclusion.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("conclusionContainer").innerHTML = data;
-				})
-				.catch((error) => console.error("Error loading conclusion:", error));
-		</script>
+		<main>
+			<section>
+				<h2>Introduction</h2>
+				<p>
+					As the vintage and secondhand market grows, its online marketplace has become more overwhelming. Retrofit's
+					solution is an AI-curated vintage marketplace, which uses social media trends, sales data, and a user's style
+					to personalize a user's shopping experience and recommend a curated inventory.
+				</p>
+				<p>
+					We used an iterative design process to design, get feedback on, and redesign an interactive mobile prototype
+					for Retrofit.
+				</p>
+			</section>
+
+			<section>
+				<h2>Sketching</h2>
+				<p>
+					Our process began with low-fidelity hand-drawn sketches. These explored potential layouts for the homepage,
+					search interface, and product detail pages. The goal was to prioritize scannability and ease of navigation,
+					while leaving room for personalization and recommendation systems.
+				</p>
+				<figure>
+					<img src="../images/sketches/image1.jpg" width="300" />
+					<img src="../images/sketches/image3.jpg" width="300" />
+					<img src="../images/sketches/image4.jpg" width="500" />
+					<img src="../images/sketches/image5.jpg" width="500" />
+					<img src="../images/sketches/image2.png" width="600" />
+					<figcaption>Initial sketches showing layout concepts for the homepage and product screens.</figcaption>
+				</figure>
+			</section>
+
+			<section>
+				<h2>Wireframing</h2>
+				<p>
+					We decided to create mock-ups for a mobile application instead of a desktop version because we felt it aligned
+					more closely with the needs of our target audience - young people and shoppers, who often prefer to browse and
+					scroll on their phones. In our wireframes, we wanted to reflect a design that is both convenient and
+					user-friendly.
+				</p>
+				<p>
+					Next, we combined aspects from all our sketches to create wireframes that emphasized AI-curation and were
+					simple and intuitive.
+				</p>
+				<p>Points of focus:</p>
+				<ul>
+					<li>Chatbot-like search prompt on the home page</li>
+					<li>Intuitive grid layout for images</li>
+					<li>Clothing rack on the home page</li>
+					<li>Image carousel for single item page</li>
+					<li>AI-style profile emphasis on profile page</li>
+				</ul>
+				<div class="images">
+					<div class="row">
+						<img src="../images/wireframes/image1.png" width="300" />
+						<img src="../images/wireframes/image2.png" width="300" />
+						<img src="../images/wireframes/image3.png" width="300" />
+					</div>
+				</div>
+				<p>
+					<a href="https://www.loom.com/share/2150cf0829204ca0a629b7173a45b086">Here</a> is a link to a Loom video
+					detailing the thought process behind our wireframe.
+				</p>
+				<p>
+					After creating this lo-fi wireframe, we received feedback on it from a TA, which helped us identify what was
+					missing, what was confusing, and what could be improved - all of which would help us create our next
+					iteration.
+				</p>
+				<p>Feedback received:</p>
+				<ul>
+					<li>Make the distinction between what is shown publicly on the profile page vs. what isn't more clear.</li>
+					<li>
+						Add an info icon next to the match percentage of an item that explains what it means for a product to be a
+						match.
+					</li>
+					<li>
+						Create a feature that allows users to be taken to a brand’s page or link when they click on the brand.
+					</li>
+					<li>
+						Emphasize curation and provide more guidance to users on the home page (the home page is confusing and users
+						might not know how to proceed).
+					</li>
+					<li>
+						Change wording to “browse *your* AI curated selection”, so users understand it is curated specifically for
+						them.
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Hi-fi prototype</h2>
+				<p>
+					From this feedback, we used Figma to design a hi-fi prototype, and made the following changes to our original
+					design:
+				</p>
+				<ul>
+					<li>Added checkout, search results, and brand specific screens</li>
+					<li>Created add to cart and percent match informational popups</li>
+					<li>Added private/public distinction to profile page</li>
+					<li>Changed grid on home page to sectioned recommendations</li>
+				</ul>
+				<figure>
+					<img src="../images/hifi.png" width="300" />
+				</figure>
+				<p>
+					<a
+						href="https://www.figma.com/proto/4h5LQ2bwtvXP1nEEFD0Cu4/Retrofit?page-id=0%3A1&node-id=13-17&viewport=531%2C29%2C0.3&t=vW3vfLgmXsChKdar-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=13%3A17"
+						>Here</a
+					>
+					is the link to our full interactive Figma prototype. You can also view a Loom video
+					<a href="https://www.loom.com/share/b319761c728046be8bb692accd4cca2c?sid=debd48f3-7e92-4088-976b-a32ba2c1299d"
+						>here</a
+					>
+					demonstrating our interface and our thought process.
+				</p>
+			</section>
+
+			<section>
+				<h2>User testing</h2>
+				<p>
+					To test our design with potential users, we asked people to complete the following task: search for an item
+					and purchase it, completing the checkout process.
+				</p>
+				<p>These are the necessary steps to complete the task:</p>
+				<ul>
+					<li>Select the search bar or icon</li>
+					<li>Type query (keyboard not prototyped) and press enter.</li>
+					<li>Click item.</li>
+					<li>Click “Add to cart”.</li>
+					<li>Click “Go to cart”.</li>
+					<li>Click “Go to checkout”.</li>
+					<li>Review details and click “Confirm and pay”.</li>
+				</ul>
+				<h3>Errors users made</h3>
+				<ul>
+					<li>
+						Reselecting the search bar once prompted to search. This was due to the keyboard popup being incomplete, so
+						they were unaware that they were already able to search.
+					</li>
+					<ul>
+						<li>Multiple users attempted to do this.</li>
+						<li>There was some confusion about not being able to actually type to search something up.</li>
+					</ul>
+					<li>
+						One user stuttered at the “Added to Cart” popup because it was more 'in-your-face' than other apps they had
+						experience with.
+					</li>
+				</ul>
+				<h3>General results</h3>
+				<ul>
+					<li>Users found the interface very intuitive due to its similarity to other shopping interfaces.</li>
+					<li>
+						Users were able to easily find the correct buttons/interactive components to press to work through the task.
+					</li>
+				</ul>
+				<h3>Potential interface changes</h3>
+				<ul>
+					<li>Adding a keyboard to the prototype would ensure users are aware they can search.</li>
+					<li>
+						Instead of a persistent popup upon adding an item to cart, could have it appear as a less intrusive banner
+						at the top of the app. This would allow the user to continue their shopping momentum instead of being forced
+						to pause and address the popup.
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Conclusion</h2>
+				<p>
+					Through our iterative design process, we developed an intuitive, user-centric mobile app for Retrofit that
+					addresses the pain points of online vintage shopping - overwhelming inventory and impersonal experiences. By
+					incorporating user feedback as much as possible, we created an interface that effectively integrates
+					AI-curation into a seamless browsing and purchasing experience. User testing confirmed the success of our
+					design approach, highlighting both strengths and areas for further enhancement. Ultimately, our iterative
+					method allowed us to create a solution that not only meets user expectations but also significantly elevates
+					the convenience and personalization of online vintage shopping.
+				</p>
+			</section>
+		</main>
 	</body>
 </html>
