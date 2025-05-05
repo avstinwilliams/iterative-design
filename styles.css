@@ -20,6 +20,7 @@ header {
 	color: white;
 	padding: 2rem 1rem;
 	text-align: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -38,7 +39,7 @@ main {
 
 h2 {
 	font-size: 1.5rem;
-	margin-top: 2rem;
+	margin-top: 0rem;
 	border-bottom: 2px solid var(--subtle-gray);
 	padding-bottom: 0.3rem;
 }
@@ -54,7 +55,7 @@ p {
 }
 
 ul {
-	margin: 1rem 0 1rem 1.5rem;
+	padding-left: 1.5rem;
 }
 
 li {
@@ -69,10 +70,12 @@ figure {
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	margin: 1rem auto;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 figcaption {
@@ -80,6 +83,22 @@ figcaption {
 	color: #555;
 	margin-top: 0.5rem;
 	text-align: center;
+}
+
+.image-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+	margin: 1.5rem 0;
+}
+
+.image-row img {
+	flex: 1 1 200px;
+	max-width: 400px;
+	height: auto;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 a {
